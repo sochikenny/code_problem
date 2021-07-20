@@ -35,4 +35,4 @@ function calculate(str){
         }
     }
 
-console.log(calculate("12 * 2"))
+console.log(calculate("100 * 2"))
