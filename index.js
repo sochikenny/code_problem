@@ -22,15 +22,9 @@ function calculate(str) {
 }
 
 function operatorHelper(x, y, operation) {
-  if (operation === "*") {
-    return x * y;
-  }
-  if (operation === "+") {
-    return x + y;
-  }
-  if (operation === "-") {
-    return x - y;
-  }
+  if (operation === "*") return x * y;
+  if (operation === "+") return x + y;
+  if (operation === "-") return x - y;
 }
 
 // Test inputs
