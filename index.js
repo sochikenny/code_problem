@@ -8,10 +8,12 @@ function calculate(str) {
 
   let result, newResult;
   for (let i = 0; i < newString.length; i++) {
-    if (newString[i] === "*" || newString[i] === "+" || newString[i] === "-") {
-      result = operatorHelper(Number(newString[i - 1]), Number(newString[i + 1]),
-        newString[i]
-      );
+    let sign = newString[i],
+      prevNum = Number(newString[i - 1]),
+      nextNum = Number(newString[i + 1]);
+
+    if (sign === "*" || sign === "+" || sign === "-") {
+      result = operatorHelper(prevNum, nextNum, sign);
       newString[i + 1] = result;
       newResult = newString[i + 1];
     }
@@ -31,21 +33,18 @@ function operatorHelper(x, y, operation) {
   }
 }
 
-// Test inputs 
-console.log(calculate(""))
-console.log(calculate("2 * 2"))
-console.log(calculate("12 - 8"))
-console.log(calculate("12 + 10"))
-console.log(calculate("3 + 1 - 2"))
-console.log(calculate("4 - 2 + 1"))
-console.log(calculate("3 * 4 * 2 * 1"))
+// Test inputs
+console.log(calculate(""));
+console.log(calculate("2 * 2"));
+console.log(calculate("12 - 8"));
+console.log(calculate("12 + 10"));
+console.log(calculate("3 + 1 - 2"));
+console.log(calculate("4 - 2 + 1"));
+console.log(calculate("3 * 4 * 2 * 1"));
 console.log(calculate("12 * 10 - 2"));
 console.log(calculate("12 + 10 - 2"));
 console.log(calculate("12 - 10 - 2"));
 console.log(calculate("12 * 10 + 2 - 4 + 20"));
-
-
-
 
 /*
 INITIAL SOLUTION (NON-OPTIMAL)
