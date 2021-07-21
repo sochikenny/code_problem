@@ -10,7 +10,7 @@ function calculate(str){
     for(let i = 0; i < newStr.length; i++){
         element = newStr[i]
         if(element === "*" || element === "+" || element === "-"){
-          answer = operatorHelper(Number(newStr[0]), Number(newStr[2]), element)
+          answer = operatorHelper(Number(newStr[i - 1]), Number(newStr[i + 1]), element)
         }
     }
     
@@ -35,4 +35,4 @@ function calculate(str){
         }
     }
 
-console.log(calculate("100 * 2"))
+console.log(calculate("100 - 2"))
