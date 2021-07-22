@@ -1,4 +1,4 @@
-//Time Complexity is O(N) where is the length of the string
+//Time Complexity is O(N) where is N the length of the string
 //Space Complexity is O(1)
 
 function calculate(str) {
